@@ -1,5 +1,6 @@
 let toolbox = {
   top: 467,
+  height: 133,
 
   show(){
     fill("#8f8")
@@ -8,9 +9,9 @@ let toolbox = {
     textSize(20)
     fill(0)
     let msg = scenes[current_scene].characters.includes(player.slot) ?
-        "press enter to talk to character" :  dialog[current_scene] ? dialog[current_scene] : " "
-    textAlign(LEFT, TOP)
-    text(msg, 20, this.top+5, width, height-this.top)
+        "press enter to talk to character" : dialog[current_scene] ? dialog[current_scene] : " "
+    textAlign(LEFT,TOP)
+    text(msg, 10, this.top+5, width-20, this.height-10)
     if (msg == " ")
       printItem("letter", 500, 500)
   }
